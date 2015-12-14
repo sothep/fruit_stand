@@ -1,0 +1,75 @@
+body {
+  font-family: "Comic Sans MS", sans-serif;
+  background-image: url(http://subtlepatterns.com/confectionary/);
+  background-color: #66ccff;
+}
+.apple-stand, .orange-stand, .banana-stand, .pear-stand {
+  height: 150px;
+  width: 150px;
+  border: 10px solid #663300;
+  border-bottom: 60px solid #663300;
+  float: left;
+  margin-left: 160px;
+  margin-bottom: 50px;
+  background-color: #ccffff;
+  text-align: center;
+  padding-top: 15px;
+  font: 18px/20px;
+}
+.apple-stand, .orange-stand, .banana-stand, .pear-stand p {
+  
+}
+img {
+  margin-left: 15%;
+}
+.apple-stand:hover, .orange-stand:hover, .banana-stand:hover, .pear-stand:hover {
+  
+}
+.user-interface {
+  border: 3px solid #663300;
+  border-radius: 5px;
+  clear: both;
+}
+.user-interface p {
+    display: block;
+  margin-left: 15px;
+}
+.cash {
+  font-size: 20px;
+}
+.apples {
+  float: left;
+  margin-left: 35%;
+}
+.oranges {
+  float: left;
+}
+.bananas {
+  float: left;
+}
+.pears {
+  float: left;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  display: block;
+  text-align: center;
+  margin-left: 15px;
+}
+.apples h2 {
+  color: red;
+}
+.oranges h2 {
+  color: orange;
+}
+.bananas h2 {
+  color: yellow;
+}
+.pears h2 {
+  color: #99ff33;
+}
+p {
+  text-align: center;
+}
