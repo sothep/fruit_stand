@@ -14,6 +14,8 @@ header {
   color:transparent;
   -webkit-background-clip: text;
   background-clip: text;
+ /* text-shadow: 5px 5px black;*/
+
 }
 .wow {
   text-decoration: underline;
