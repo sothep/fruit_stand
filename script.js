@@ -5,7 +5,7 @@ var gameTime = 10000;
 var timeout = false;
 var totalTime = 0;
 
-var apple = new Fruit('apple', 2.50);
+var apple = new Fruit('apple', 9.50);
 var orange = new Fruit('orange', 0.50);
 var banana = new Fruit('banana', 1.00);
 // var grapes = new Fruit('grapes', 7.50);
@@ -124,10 +124,17 @@ function Fruit(name, price) {
   this.price = parseFloat(price);
 
   this.changePrice = function() {
-    this.price += randomNumber(-50, 50) / 100;
-    this.price = Math.round(this.price*100) / 100;
-    if (this.price > 9.99 || this.price < 0.50){
-      this.changePrice();
+    if (this.price - .5 < 0.5) {
+      var lowerBound = (this.price * 100) - 50;
+      this.price += randomNumber(lowerBound, 50) / 100;
+      this.price = Math.round(this.price*100) / 100;
+    } else if (this.price + .5 > 9.99) {
+      var upperBound = 999 - ((this.price) * 100);
+      this.price += randomNumber(-50, upperBound) / 100;
+      this.price = Math.round(this.price*100) / 100;
+    } else {
+      this.price += randomNumber(-50, 50) / 100;
+      this.price = Math.round(this.price*100) / 100;
     }
     updateDomPrice(this);
   }
@@ -147,7 +154,7 @@ function updateCash(user) {
 function updateDomPrice(fruit) {
   //this is a placeholder
   $el = $("."+fruit.name.toString());
-  $el.text("$" + fruit.price);
+  $el.text("$" + fruit.price.toFixed(2));
 }
 
 
